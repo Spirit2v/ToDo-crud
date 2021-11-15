@@ -16,8 +16,10 @@ mongoose.connect(uri, { useNewUrlParser: true })
   .then(() => console.log(`Database connected successfully`))
   .catch(err => console.log(err));
 
-  
+
+  const TodoRoutes=require('./routes/TodoRoutes')
+app.use('/',TodoRoutes)  
 
 app.listen(port,()=>{
-    console.log('Server is running  ')
+    console.log('Server is running  '+port)
 });
