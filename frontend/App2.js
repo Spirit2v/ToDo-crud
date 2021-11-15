@@ -50,7 +50,9 @@ const [formData,setFormData]=useState('')
     // setPeople(prevPeople => {
     //   return prevPeople.filter(person => person.id != id);
     // });
-    await axios.post(`http://192.168.43.154:5000/del/${_id}`, {todo:text})
+
+    alert(_id)
+    await axios.post(`http://192.168.43.154:5000/del/${_id}`)
     .then(response => {console.log(response)}
     )
 }
